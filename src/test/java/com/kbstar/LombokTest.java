@@ -13,7 +13,7 @@ public class LombokTest {
 
     @Test
     void contextLoad() {
-        ItemDTO cust = new ItemDTO("id01", "pwd01", "이말숙");
-        logger.info(cust.toString());
+//        ItemDTO cust = new ItemDTO("id01", "pwd01", "이말숙");
+//        logger.info(cust.toString());
     }
 }

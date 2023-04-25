@@ -3,15 +3,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
@@ -19,19 +16,18 @@
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
-
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
     <!-- 차트 -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
-
+    <script src="/js/charts.js"></script>
+    <%--jquery--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -55,11 +51,10 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
-
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -379,15 +374,17 @@
             </nav>
             <!-- End of Topbar -->
 
-            <!-- center.jsp -->
-            <c:choose>
-                <c:when test="${center == null}">
-                    <jsp:include page="center.jsp"/>
-                </c:when>
-                <c:otherwise>
-                    <jsp:include page="${center}.jsp"/>
-                </c:otherwise>
-            </c:choose>
+            <div class="container-fluid">
+                <!-- center.jsp -->
+                <c:choose>
+                    <c:when test="${center == null}">
+                        <jsp:include page="center.jsp"/>
+                    </c:when>
+                    <c:otherwise>
+                        <jsp:include page="${center}.jsp"/>
+                    </c:otherwise>
+                </c:choose>
+            </div>
 
         </div>
         <!-- End of Main Content -->
