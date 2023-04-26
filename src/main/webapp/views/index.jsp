@@ -374,17 +374,15 @@
             </nav>
             <!-- End of Topbar -->
 
-            <div class="container-fluid">
-                <!-- center.jsp -->
-                <c:choose>
-                    <c:when test="${center == null}">
-                        <jsp:include page="center.jsp"/>
-                    </c:when>
-                    <c:otherwise>
-                        <jsp:include page="${center}.jsp"/>
-                    </c:otherwise>
-                </c:choose>
-            </div>
+            <!-- center.jsp -->
+            <c:choose>
+                <c:when test="${center == null}">
+                    <jsp:include page="center.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="${center}.jsp"/>
+                </c:otherwise>
+            </c:choose>
 
         </div>
         <!-- End of Main Content -->
